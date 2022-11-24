@@ -59,12 +59,12 @@
     <script>
     $(document).ready(function(){
       setInterval(function(){
-        $.getJSON('https://blynk.cloud/external/api/get?token=lBAiV_JV-k_mNgmgtxJKnRoJljnXvi80&V3', function(data1){
+        $.getJSON('https://blynk.cloud/external/api/get?token=Buc7d1--eeEMo6Th2sCboahHWZ2UotWX&V3', function(data1){
            console.log(data1)
            if(data1 == '0'){
             $('#avgbpm').html('No Finger');
            }else{
-            $.getJSON('https://blynk.cloud/external/api/get?token=lBAiV_JV-k_mNgmgtxJKnRoJljnXvi80&V2', function(data){
+            $.getJSON('https://blynk.cloud/external/api/get?token=Buc7d1--eeEMo6Th2sCboahHWZ2UotWX&V2', function(data){
         //   console.log(data);
           $('#avgbpm').html('<span>' + data + ' BPM</span>')
           if(data >= "60" && data <= "100"){
