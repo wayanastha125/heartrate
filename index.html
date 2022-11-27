@@ -59,23 +59,23 @@
     <script>
     $(document).ready(function(){
       setInterval(function(){
-        $.getJSON('https://blynk.cloud/external/api/get?token=BAiV_JV-k_mNgmgtxJKnRoJljnXvi80&V3', function(data1){
+        $.getJSON('https://blynk.cloud/external/api/get?token=ZAErvM8uovS7PR30K4yBX5EkWJi8Zla6&V3', function(data1){
            console.log(data1)
            if(data1 == '0'){
             $('#avgbpm').html('No Finger');
            }else{
-            $.getJSON('https://blynk.cloud/external/api/get?token=BAiV_JV-k_mNgmgtxJKnRoJljnXvi80&V3', function(data){
+            $.getJSON('https://blynk.cloud/external/api/get?token=ZAErvM8uovS7PR30K4yBX5EkWJi8Zla6&V2', function(data){
         //   console.log(data);
-          $('#avgbpm').html('<span>' + data + ' BPM</span>')
-          if(data >= "60" && data <= "100"){
-            // console.log("Normal")
-            $('#status').html('<span>Status: <span class="text-success">Normal</span></span>')
-          }else if(data <= "60"){
-            // console.log("Tidak Normal")
-            $('#status').html('<span>Status: <span class="text-danger">Tidak Normal</span></span>')
-          }else{
-            // console.log("Tidak Normal")
-            $('#status').html('<span>Status: <span class="text-danger">Tidak Normal</span></span>')
+              $('#avgbpm').html('<span>' + data + ' BPM</span>')
+              if(data >= "60" && data <= "100"){
+                // console.log("Normal")
+                $('#status').html('<span>Status: <span class="text-success">Normal</span></span>')
+              }else if(data <= "60"){
+                // console.log("Tidak Normal")
+                $('#status').html('<span>Status: <span class="text-danger">Tidak Normal</span></span>')
+              }else{
+                // console.log("Tidak Normal")
+                $('#status').html('<span>Status: <span class="text-danger">Tidak Normal</span></span>')
           }
         })
            }
